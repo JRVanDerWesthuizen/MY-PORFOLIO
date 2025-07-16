@@ -1,0 +1,132 @@
+/* Custom CSS for body background and font */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050510; /* Very dark blue/black fallback */
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+}
+
+/* Canvas for Three.js animation */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Send it to the background */
+}
+
+/* General section styling for content readability over background */
+.content-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    backdrop-filter: blur(5px); /* Subtle blur for modern feel */
+    border-radius: 1rem; /* Rounded corners */
+    box-shadow: 0 0 40px rgba(135, 206, 235, 0.15); /* Subtle blue glow */
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0; /* Hidden by default for scroll animation */
+    transform: translateY(20px); /* Slightly down for slide-up effect */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar styling for a sleek look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d0d20;
+}
+::-webkit-scrollbar-thumb {
+    background: #4A90E2;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #63B3ED;
+}
+
+/* Project card specific styling */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.08); /* Lighter semi-transparent */
+    border: 1px solid rgba(135, 206, 235, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(135, 206, 235, 0.3);
+}
+
+/* Skill category styling */
+.skill-category {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #4A90E2;
+}
+
+/* Hero section specific styling */
+.hero-section {
+    background-image: url('http://googleusercontent.com/image_generation_content/5'); /* Starry background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden; /* Hide overflow from any canvas elements */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for text readability */
+    backdrop-filter: blur(8px);
+    border-radius: 2rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 0 60px rgba(135, 206, 235, 0.3);
+    max-width: 90%;
+    animation: fadeInScale 1.5s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation for the logo/badge */
+.logo-animation {
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 2rem 2.5rem;
+    }
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    .content-section {
+        padding: 1.5rem;
+    }
+}

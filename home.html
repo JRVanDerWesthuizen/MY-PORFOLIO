@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Van Der Westhuizen - Software Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Three.js Canvas for background animations -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="hero-content">
+            <!-- Logo (atom planet badge) -->
+            <img src="static/images/logo.png" alt="Jonathan Van Der Westhuizen Logo" class="mx-auto mb-6 w-40 h-40 object-contain logo-animation">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-sky-300 drop-shadow-lg">Jonathan Remaquin Van Der Westhuizen</h1>
+            <p class="text-2xl md:text-3xl font-light text-blue-200">Software Developer Portfolio</p>
+            <a href="#projects" class="mt-8 inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105">
+                Explore My Work <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 py-12">
+        <!-- Summary Section -->
+        <section id="summary" class="content-section">
+            <h2 class="text-4xl font-bold mb-6 text-sky-400 border-b-2 border-sky-600 pb-3">Summary</h2>
+            <p class="text-lg leading-relaxed">A versatile software developer with experience spanning web, mobile, compiler construction, automation/testing, and DevOps. Skilled in both frontend and backend technologies, mobile frameworks, systems programming, and tooling for agile workflows. Proven track record of taking projects from concept through implementation and deployment.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <h2 class="text-4xl font-bold mb-6 text-sky-400 border-b-2 border-sky-600 pb-3">🔥 Projects Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Bazooka Food-Ordering App -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">1. Bazooka Food-Ordering App</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Flutter · Dart · Firebase (Auth, Firestore, Cloud Functions, FCM)</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Auth & Roles:</span> Secure email/password + Google Sign-In, Apple-Sign-In compliance, dynamic role-based access.</li>
+                        <li><span class="font-semibold text-white">Real-time Orders:</span> Firestore listeners for live order streaming, dynamic ETA calculation (10–15 min), and status updates.</li>
+                        <li><span class="font-semibold text-white">Push Notifications:</span> Integrated FCM for real-time alerts to employees (new orders) and customers (order ready).</li>
+                        <li><span class="font-semibold text-white">BI Dashboard:</span> Developed employee-facing analytics panel for operational insights.</li>
+                        <li><span class="font-semibold text-white">iOS Deployment:</span> Managed CocoaPods & Xcode config, ensuring App Store compliance (Sign in with Apple, screenshot sizing).</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2: Fridge Fillerz Flutter App -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">2. Fridge Fillerz - Grocery Delivery App</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Flutter · Dart · Firebase (Auth/Firestore) · Cloud Functions (Node.js)</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Full-Feature Ordering:</span> Implemented user workflows for selecting items across multiple stores, setting delivery constraints, and viewing order summaries.</li>
+                        <li><span class="font-semibold text-white">Firebase Backend:</span> Leveraged Firebase for robust user authentication, real-time database management, and serverless logic via Cloud Functions.</li>
+                        <li><span class="font-semibold text-white">Enhanced UX:</span> Integrated engaging onboarding animations and dynamic content pages for a seamless user experience.</li>
+                        <li><span class="font-semibold text-white">Store Publishing:</span> Successfully configured and published the application to both Apple App Store and Google Play Store.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3: Mini POS System (Web) -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">3. Mini Web POS System</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">PHP · MySQL · JavaScript · HTML · CSS · Web Push APIs</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Full-Stack Development:</span> Designed and built a point-of-sale system with a PHP/MySQL backend and an interactive JavaScript/HTML/CSS frontend.</li>
+                        <li><span class="font-semibold text-white">Dynamic Stock Tracking:</span> Implemented real-time inventory decrement upon sales and enabled admin-only stock adjustments.</li>
+                        <li><span class="font-semibold text-white">Notification System:</span> Integrated Web Push APIs to provide instant alerts for key system events.</li>
+                        <li><span class="font-semibold text-white">Robust Data Management:</span> Ensured data integrity and efficient querying with a well-structured MySQL database.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4: Wild Apple Interactive Website & Prototype -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">4. Wild Apple - Interactive Marketing Site</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">React · JavaScript (ES6+) · CSS/Animations · Figma (Prototyping)</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Frontend Development:</span> Developed a responsive, animated, and interactive marketing site from scratch using React.</li>
+                        <li><span class="font-semibold text-white">UI/UX Design:</span> Simultaneously created a high-fidelity prototype in Figma to iterate and refine user experience flows before implementation.</li>
+                        <li><span class="font-semibold text-white">Modern Web Practices:</span> Leveraged ES6+ features and advanced CSS animations to create a dynamic and engaging user interface.</li>
+                        <li><span class="font-semibold text-white">Cross-Browser Compatibility:</span> Ensured consistent performance and appearance across various web browsers.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 5: Compiler Construction Suite (Java) -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">5. Multi-Stage Compiler Construction Suite</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Java · Regex · Custom Exception Handling · File I/O</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Full Compiler Simulation:</span> Developed a multi-stage compiler, simulating Lexical, Syntax, Semantic, Intermediate Code Representation, Code Generation, and Optimization phases.</li>
+                        <li><span class="font-semibold text-white">Robust Error Handling:</span> Implemented regex-based lexical and parser checks with custom exception handling for syntax/semantic errors.</li>
+                        <li><span class="font-semibold text-white">Target Code Generation:</span> Extended the compiler to translate intermediate representation into target assembly/machine code.</li>
+                        <li><span class="font-semibold text-white">Systems Programming:</span> Demonstrated deep understanding of core computer science principles and low-level system design.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 6: Android Login App with Jetpack Compose -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">6. Native Android Login App with Jetpack Compose</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Kotlin · Android Studio · Jetpack Compose · RESTful Auth</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Modern UI Development:</span> Built a user login application fully in Jetpack Compose, showcasing proficiency with Android's declarative UI toolkit.</li>
+                        <li><span class="font-semibold text-white">API Integration:</span> Implemented RESTful authentication, demonstrating secure communication with a backend service.</li>
+                        <li><span class="font-semibold text-white">Dynamic Content Display:</span> Integrated a scrollable list with images and interactive pop-up dialogs for detailed information.</li>
+                        <li><span class="font-semibold text-white">Native Performance:</span> Optimized for smooth performance and a responsive user experience on Android devices.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 7: Alias Game API & Persistence (Kotlin) -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">7. Alias Game API & State Persistence</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Kotlin · JSON serialization · File I/O</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Backend API Development:</span> Extended a multiplayer "Alias" game API, enhancing its core functionality.</li>
+                        <li><span class="font-semibold text-white">Data Persistence:</span> Implemented robust game state persistence between sessions using file handling and JSON serialization.</li>
+                        <li><span class="font-semibold text-white">Seamless Recovery:</span> Ensured that ongoing games could seamlessly recover after server restarts, improving reliability.</li>
+                        <li><span class="font-semibold text-white">Kotlin Proficiency:</span> Demonstrated strong command of Kotlin for backend and system-level programming.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 8: Selenium Web Automation (Python) -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">8. Selenium Web Automation Suite</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Python · Selenium WebDriver · XPath/CSS selectors</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">End-to-End Automation:</span> Developed automated scripts for comprehensive browser interactions on an online practice test portal.</li>
+                        <li><span class="font-semibold text-white">Problem Solving:</span> Diagnosed and resolved script hang-ups and element interaction issues, ensuring robust test execution.</li>
+                        <li><span class="font-semibold text-white">Efficient Selectors:</span> Utilized advanced XPath and CSS selectors for reliable element identification and interaction.</li>
+                        <li><span class="font-semibold text-white">Quality Assurance:</span> Improved testing efficiency and coverage, highlighting strong QA and automation skills.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 9: PDF Merger CLI Tool -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">9. Command-Line PDF Merger Tool</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Python · PyPDF2</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Utility Development:</span> Created a Python CLI tool for merging multiple PDF files efficiently.</li>
+                        <li><span class="font-semibold text-white">Robust File Handling:</span> Implemented graceful error handling for missing or inaccessible input files.</li>
+                        <li><span class="font-semibold text-white">Scalable Design:</span> Future-proofed for consistent page sizing and potential batch processing enhancements.</li>
+                        <li><span class="font-semibold text-white">Automation Potential:</span> Demonstrates ability to create practical automation scripts for common tasks.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 10: Flutter iOS Deployment & Compliance -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">10. Flutter iOS Deployment & App Store Compliance</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Flutter · macOS · Xcode · Apple Dev Program</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">Release Engineering:</span> Successfully debugged complex build failures on iOS test devices and configured provisioning profiles.</li>
+                        <li><span class="font-semibold text-white">App Store Compliance:</span> Resolved critical rejection issues (e.g., Design 4.8 “Login Services”) and ensured adherence to Apple's guidelines.</li>
+                        <li><span class="font-semibold text-white">Workflow Automation:</span> Streamlined screenshot resizing, metadata preparation, and ID verification workflows for submission.</li>
+                        <li><span class="font-semibold text-white">Troubleshooting Expertise:</span> Demonstrated advanced problem-solving skills in mobile deployment environments.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 11: Flutter SDK & CocoaPods Automation on macOS -->
+                <div class="project-card p-6 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-300">11. Flutter Dev Environment Automation</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tech: <span class="font-medium text-blue-200">Bash Scripting · CocoaPods · Firebase SDK</span></p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li><span class="font-semibold text-white">DevOps Practices:</span> Developed Bash scripts to automate and streamline Flutter SDK and CocoaPods installations on macOS.</li>
+                        <li><span class="font-semibold text-white">Reproducible Environments:</span> Ensured consistent and reproducible development environments by locking SDK and dependency versions.</li>
+                        <li><span class="font-semibold text-white">Dependency Management:</span> Optimized `pod install` workflows for Firebase Auth/Firestore/Storage, reducing setup time.</li>
+                        <li><span class="font-semibold text-white">Tooling & Efficiency:</span> Showcased ability to improve developer experience and build pipeline efficiency.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+            <h2 class="text-4xl font-bold mb-6 text-sky-400 border-b-2 border-sky-600 pb-3">💻 Core Skills & Toolbelt</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Mobile Dev -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-mobile-alt mr-2"></i>Mobile Dev</h3>
+                    <p class="text-gray-300">Flutter · Dart · Swift interop · Xcode · CocoaPods</p>
+                </div>
+                <!-- Backend & Cloud -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-cloud mr-2"></i>Backend & Cloud</h3>
+                    <p class="text-gray-300">Firebase Auth, Firestore, Cloud Functions, FCM, REST APIs</p>
+                </div>
+                <!-- DevOps & CI/CD -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-cogs mr-2"></i>DevOps & CI/CD</h3>
+                    <p class="text-gray-300">Git/GitHub · macOS shell scripting · Podfile versioning</p>
+                </div>
+                <!-- Testing & QA -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-vial mr-2"></i>Testing & QA</h3>
+                    <p class="text-gray-300">Manual checklists · Automated test design · Offline/edge testing</p>
+                </div>
+                <!-- Python Scripting -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fab fa-python mr-2"></i>Python Scripting</h3>
+                    <p class="text-gray-300">PyPDF2 · CLI design · Exception handling</p>
+                </div>
+                <!-- UI/UX & Design -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-palette mr-2"></i>UI/UX & Design</h3>
+                    <p class="text-gray-300">Material + Cupertino theming · Responsive layouts</p>
+                </div>
+                <!-- App Store & GDPR -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-store mr-2"></i>App Store & GDPR</h3>
+                    <p class="text-gray-300">Sign in with Apple compliance · Metadata & screenshot prep</p>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-handshake mr-2"></i>Soft Skills</h3>
+                    <p class="text-gray-300">Agile collaboration · Technical writing · Stakeholder pitching</p>
+                </div>
+                <!-- Languages & Frameworks -->
+                <div class="skill-category p-5 rounded-lg col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-code mr-2"></i>Languages & Frameworks</h3>
+                    <p class="text-gray-300">PHP, JavaScript (ES6+), Java, Kotlin, Dart/Flutter, Python, Node.js</p>
+                </div>
+                <!-- Web -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-globe mr-2"></i>Web</h3>
+                    <p class="text-gray-300">React, HTML5, CSS3 (Animations), Figma prototyping</p>
+                </div>
+                <!-- Mobile (Detailed) -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-mobile-alt mr-2"></i>Mobile (Detailed)</h3>
+                    <p class="text-gray-300">Android (Jetpack Compose), iOS deployment (App Store), Firebase integration</p>
+                </div>
+                <!-- Compiler Design -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-microchip mr-2"></i>Compiler Design</h3>
+                    <p class="text-gray-300">Lexical/Syntax/Semantic analysis, ICR, Code Generation/Optimization, custom exception handling</p>
+                </div>
+                <!-- Databases & Backend -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-database mr-2"></i>Databases & Backend</h3>
+                    <p class="text-gray-300">MySQL, Firebase Firestore, Django REST API, Cloud Functions</p>
+                </div>
+                <!-- DevOps & Deployment (Detailed) -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-server mr-2"></i>DevOps & Deployment (Detailed)</h3>
+                    <p class="text-300">Google Play Console, Apple Developer Program, CI/CD basics</p>
+                </div>
+                <!-- Testing & QA (Detailed) -->
+                <div class="skill-category p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-bug mr-2"></i>Testing & QA (Detailed)</h3>
+                    <p class="text-gray-300">Selenium automation, push notification workflows, test plan design</p>
+                </div>
+                <!-- Tools & Methodologies -->
+                <div class="skill-category p-5 rounded-lg col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300"><i class="fas fa-tools mr-2"></i>Tools & Methodologies</h3>
+                    <p class="text-gray-300">Git, Jira, Scrum workflow setup, Agile practices, UI/UX theming, responsive design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next-Gen Vision Section -->
+        <section id="vision" class="content-section">
+            <h2 class="text-4xl font-bold mb-6 text-sky-400 border-b-2 border-sky-600 pb-3">🚀 Next-Gen Vision</h2>
+            <p class="text-lg leading-relaxed">I’m all about crafting scalable, real-time experiences—think Bazooka on warp-speed—and leveling up with cutting-edge tech (AI-driven features, next-gen Dart patterns, cross-platform ML inference). Let’s build the future! 🌟</p>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" class="content-section">
+            <h2 class="text-4xl font-bold mb-6 text-sky-400 border-b-2 border-sky-600 pb-3">📞 Get In Contact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="flex items-center text-lg text-gray-300">
+                    <i class="fas fa-phone-alt text-blue-400 text-2xl mr-4"></i>
+                    <a href="tel:+264857749577" class="hover:text-blue-300 transition-colors duration-200">+264 85 7749577</a>
+                </div>
+                <div class="flex items-center text-lg text-gray-300">
+                    <i class="fas fa-envelope text-blue-400 text-2xl mr-4"></i>
+                    <a href="mailto:vanderwesthuizenlimited@gmail.com" class="hover:text-blue-300 transition-colors duration-200">vanderwesthuizenlimited@gmail.com</a>
+                </div>
+                <div class="flex items-center text-lg text-gray-300">
+                    <i class="fab fa-github text-blue-400 text-2xl mr-4"></i>
+                    <a href="https://github.com/JRVanDerWesthuizen" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors duration-200">JRVanDerWesthuizen</a>
+                </div>
+                <div class="flex items-center text-lg text-gray-300">
+                    <i class="fab fa-instagram text-blue-400 text-2xl mr-4"></i>
+                    <a href="https://instagram.com/astro.steezy" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors duration-200">@astro.steezy</a>
+                </div>
+            </div>
+
+            <h3 class="text-3xl font-semibold mb-4 text-blue-300">Send Me a Message</h3>
+            <form id="contactForm" action="https://formspree.io/f/xdkdojow" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-gray-400 text-sm font-bold mb-2">Your Name:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 transition-all duration-200" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-400 text-sm font-bold mb-2">Your Email:</label>
+                    <input type="email" id="email" name="_replyto" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 transition-all duration-200" placeholder="your.email@example.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block text-gray-400 text-sm font-bold mb-2">Subject:</label>
+                    <input type="text" id="subject" name="_subject" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 transition-all duration-200" placeholder="Subject of your message" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-400 text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="6" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 transition-all duration-200" placeholder="Your message here..." required></textarea>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+                        Send Email <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+                <!-- Message display area -->
+                <div id="form-messages" class="mt-4 text-center text-lg"></div>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 text-center py-8">
+        <p>&copy; 2025 Jonathan Remaquin Van Der Westhuizen. All rights reserved.</p>
+        <p class="mt-2 text-sm">Built with passion and code. ✨</p>
+    </footer>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>
