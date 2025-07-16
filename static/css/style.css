@@ -17,15 +17,15 @@ body {
 
 /* General section styling for content readability over background */
 .content-section {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-    backdrop-filter: blur(5px); /* Subtle blur for modern feel */
-    border-radius: 1rem; /* Rounded corners */
-    box-shadow: 0 0 40px rgba(135, 206, 235, 0.15); /* Subtle blue glow */
-    padding: 2.5rem;
-    margin-bottom: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.75); /* Slightly more opaque for better text contrast */
+    backdrop-filter: blur(8px); /* Increased blur for a more ethereal feel */
+    border-radius: 1.5rem; /* More rounded corners */
+    box-shadow: 0 0 60px rgba(69, 78, 82, 0.25); /* Stronger, more vibrant blue glow */
+    padding: 3rem; /* Increased padding for more breathing room */
+    margin-bottom: 3rem; /* Increased margin for better separation */
     opacity: 0; /* Hidden by default for scroll animation */
-    transform: translateY(20px); /* Slightly down for slide-up effect */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(30px); /* Slightly more down for slide-up effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Slower, smoother transition */
 }
 
 .content-section.fade-in {
@@ -35,35 +35,42 @@ body {
 
 /* Custom scrollbar styling for a sleek look */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px; /* Slightly wider scrollbar */
 }
 ::-webkit-scrollbar-track {
-    background: #0d0d20;
+    background: #0d0d20; /* Darker track */
 }
 ::-webkit-scrollbar-thumb {
-    background: #4A90E2;
-    border-radius: 4px;
+    background: #63B3ED; /* Brighter blue for thumb */
+    border-radius: 5px; /* More rounded thumb */
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #63B3ED;
+    background: #4A90E2; /* Darker blue on hover */
 }
 
 /* Project card specific styling */
 .project-card {
-    background-color: rgba(255, 255, 255, 0.08); /* Lighter semi-transparent */
-    border: 1px solid rgba(135, 206, 235, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.12); /* More opaque, more defined */
+    border: 1px solid rgba(135, 206, 235, 0.3); /* Stronger border */
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; /* Smoother transition */
 }
 .project-card:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(135, 206, 235, 0.3);
+    background-color: rgba(255, 255, 255, 0.25); /* More prominent on hover */
+    transform: translateY(-10px) scale(1.02); /* Lift and slight scale effect */
+    box-shadow: 0 15px 45px rgba(135, 206, 235, 0.4); /* More intense glow on hover */
 }
 
 /* Skill category styling */
 .skill-category {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #4A90E2;
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly more visible */
+    border-left: 5px solid #63B3ED; /* Thicker, brighter blue border */
+    padding: 1.5rem; /* More padding */
+    border-radius: 0.75rem; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.skill-category:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px); /* Slide effect on hover */
 }
 
 /* Hero section specific styling */
@@ -84,19 +91,19 @@ body {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for text readability */
-    backdrop-filter: blur(8px);
-    border-radius: 2rem;
-    padding: 3rem 4rem;
-    box-shadow: 0 0 60px rgba(135, 206, 235, 0.3);
-    max-width: 90%;
-    animation: fadeInScale 1.5s ease-out forwards;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
+    backdrop-filter: blur(10px); /* Even more blur for depth */
+    border-radius: 2.5rem; /* More rounded */
+    padding: 4rem 5rem; /* Increased padding */
+    box-shadow: 0 0 80px rgba(135, 206, 235, 0.4); /* Stronger, wider glow */
+    max-width: 95%; /* Allow it to be slightly wider */
+    animation: fadeInScale 2s ease-out forwards; /* Slower, more dramatic entrance */
 }
 
 @keyframes fadeInScale {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.85); /* Start from slightly smaller */
     }
     to {
         opacity: 1;
@@ -106,27 +113,53 @@ body {
 
 /* Animation for the logo/badge */
 .logo-animation {
-    animation: floatLogo 4s ease-in-out infinite;
+    animation: floatLogo 5s ease-in-out infinite; /* Slower float animation */
 }
 
 @keyframes floatLogo {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-20px); } /* Larger float distance */
     100% { transform: translateY(0px); }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-content {
-        padding: 2rem 2.5rem;
+        padding: 2.5rem 3rem; /* Adjusted padding for smaller screens */
+        border-radius: 1.5rem; /* Consistent rounding */
     }
     h1 {
-        font-size: 2.5rem !important;
+        font-size: 2.8rem !important; /* Slightly larger on mobile */
     }
     h2 {
-        font-size: 1.5rem !important;
+        font-size: 1.8rem !important; /* Slightly larger on mobile */
     }
     .content-section {
         padding: 1.5rem;
+        border-radius: 1rem; /* Adjusted rounding */
+        margin-bottom: 2rem;
     }
+    .project-card, .skill-category {
+        padding: 1rem; /* Adjusted padding for cards on mobile */
+    }
+}
+
+/* Further refinements for text colors and shadows */
+h1 {
+    /* text-shadow: 0 0 15px rgba(135, 206, 235, 0.9), 0 0 25px rgba(135, 206, 235, 0.6); /* More intense glow */
+}
+
+h2 {
+    /* text-shadow: 0 0 10px rgba(173, 216, 230, 0.7); /* More intense glow */
+}
+
+/* Input and textarea focus styles */
+input:focus, textarea:focus {
+    border-color: #63B3ED; /* Brighter border on focus */
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.5); /* Blue glow on focus */
+}
+
+/* Button hover state for contact form */
+button[type="submit"]:hover {
+    box-shadow: 0 8px 25px rgba(99, 179, 237, 0.6); /* More prominent shadow on hover */
 }
